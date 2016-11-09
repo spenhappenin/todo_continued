@@ -1,0 +1,9 @@
+<h1> All ToDo Lists </h1>
+<% @lists.each do |list| %>
+<ul>
+	<%= list.title %>
+	<%= list.date %>
+	<%= list.completed %>
+	<%= link_to 'Show List', list_path(list) %>
+</ul>	
+<% end %>	

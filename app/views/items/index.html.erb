@@ -1,0 +1,27 @@
+<h1> ToDo: </h1>
+
+<%= link_to 'New List Item', new_item_path %>
+<%= link_to 'Edit List Item', new_item_path %>
+<%= link_to 'Destroy List Item', new_item_path %>
+	
+	<ul>	
+	<% @items.each do |item| %>
+	<li>
+
+
+	<h3> <%= item.title %> </h3>
+	<p> Description: <%= item.description %> </p>
+
+	<%= form_for item do |f| %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    <br />
+    <%= f.submit %>
+    <% end %>
+
+    <%= link_to 'Show Details', item_path(item) %>
+
+	</li>
+	<% end %>
+	</ul>
+

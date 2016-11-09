@@ -1,0 +1,8 @@
+<div class='list-title'>
+	<h1> <%= @list.title %> - </h1>
+	<h3> <%= @list.date %> </h3>
+	<%=  %>
+</div>
+
+<!-- # this doesnt make sense to me at all (plural and singular -->
+<%= link_to 'All List Items', items_path(@items) %>
